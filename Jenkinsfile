@@ -9,7 +9,8 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'sudo chown jenkins: -R \\$PWD/'
+        sh '''sudo rm -rf ./*
+'''
         sh 'npm install'
       }
     }
